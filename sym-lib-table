@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "iPod nano 6 LCD")(type Legacy)(uri "${KIPRJMOD}/iPod nano 6 LCD.lib")(options "")(descr ""))
+)
