@@ -164,10 +164,75 @@ Wire Wire Line
 	1400 1800 1850 1800
 Text GLabel 1850 1150 2    50   Input ~ 0
 LEDPWM
-Text Notes 600  2350 0    50   ~ 0
+Text Notes 600  2400 0    50   ~ 0
 Power generation for backlight.\nSchematic kindly provided by Mike "Electric Stuff" Harrison\nelectricstuff.co.uk\n
 Wire Notes Line
-	550  2450 3250 2450
-Wire Notes Line
 	3250 2450 3250 550 
+$Comp
+L iPod~nano~6~LCD:Molex_503548-1220 J?
+U 1 1 5FD66C40
+P 4000 1100
+F 0 "J?" H 4000 1450 50  0000 L CNN
+F 1 "Molex_503548-1220" H 3900 150 50  0000 L CNN
+F 2 "" H 4000 1100 50  0001 C CNN
+F 3 "" H 4000 1100 50  0001 C CNN
+	1    4000 1100
+	1    0    0    -1  
+$EndComp
+Text GLabel 3900 850  0    50   Input ~ 0
+CLKP
+Text GLabel 3900 950  0    50   Input ~ 0
+VDD
+Text GLabel 3900 1050 0    50   Input ~ 0
+CLKN
+Text GLabel 3900 1150 0    50   Input ~ 0
+VEE
+Text GLabel 3900 1350 0    50   Input ~ 0
+SYNC
+Text GLabel 3900 1450 0    50   Input ~ 0
+DP
+Text GLabel 3900 1550 0    50   Input ~ 0
+RESET
+Text GLabel 3900 1650 0    50   Input ~ 0
+DN
+Text GLabel 3900 1750 0    50   Input ~ 0
+LED+
+Text GLabel 3900 1950 0    50   Input ~ 0
+LED-
+Wire Wire Line
+	3900 1250 3550 1250
+Wire Wire Line
+	3550 1250 3550 1300
+Wire Wire Line
+	3900 1850 3550 1850
+Wire Wire Line
+	3550 1850 3550 1900
+$Comp
+L power:GND #PWR?
+U 1 1 5FD68A93
+P 3550 1900
+F 0 "#PWR?" H 3550 1650 50  0001 C CNN
+F 1 "GND" H 3555 1727 50  0000 C CNN
+F 2 "" H 3550 1900 50  0001 C CNN
+F 3 "" H 3550 1900 50  0001 C CNN
+	1    3550 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FD68B8D
+P 3550 1300
+F 0 "#PWR?" H 3550 1050 50  0001 C CNN
+F 1 "GND" H 3555 1127 50  0000 C CNN
+F 2 "" H 3550 1300 50  0001 C CNN
+F 3 "" H 3550 1300 50  0001 C CNN
+	1    3550 1300
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	4800 2450 4800 550 
+Wire Notes Line
+	550  2450 4800 2450
+Text Notes 3300 2400 0    50   ~ 0
+Display connector
 $EndSCHEMATC
