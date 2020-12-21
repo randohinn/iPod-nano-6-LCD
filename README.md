@@ -9,13 +9,13 @@ This board is an experimentation and testing/development platform for the Apple 
 ## Hardware overview
 
 ### Current revision - revision a - December 2020
-    * ATSAM3SD8BA-AU ARM Cortex-M3 processor in QFP64 package
-    * USB-C connection for power
-        * Additional USB features may come someday
-    * A display-only connection for the iPod nano gen 6 LCD
-        * Plans for touch panel support in later revisions
-    * Both the slow clock and fast clock populated on board with crystals
-    * JTAG for programming and debugging
+* ATSAM3SD8BA-AU ARM Cortex-M3 processor in QFP64 package
+* USB-C connection for power
+     * Additional USB features may come someday
+* A display-only connection for the iPod nano gen 6 LCD
+    * Plans for touch panel support in later revisions
+* Both the slow clock and fast clock populated on board with crystals
+* JTAG for programming and debugging
 
 ## Software overview
 
