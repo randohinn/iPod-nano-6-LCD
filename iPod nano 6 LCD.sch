@@ -1032,7 +1032,7 @@ Wire Notes Line
 Wire Notes Line
 	3250 550  3250 6200
 Text Notes 550  6150 0    50   ~ 0
-BL Generator supply voltage
+BL Generator & SPI FLASH supply voltage
 $Comp
 L Regulator_Linear:AZ1117-1.8 U3
 U 1 1 5FE021C3
@@ -1574,4 +1574,72 @@ F 3 "" H 9200 6050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 9200 6050
+$Comp
+L iPod~nano~6~LCD:XTSD04GLGEAG U5
+U 1 1 5FE33365
+P 14900 1300
+F 0 "U5" H 15100 750 50  0000 L CNN
+F 1 "XTSD04GLGEAG" H 14650 650 50  0000 L CNN
+F 2 "" H 14900 1300 50  0001 C CNN
+F 3 "" H 14900 1300 50  0001 C CNN
+	1    14900 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C21
+U 1 1 5FE33CAA
+P 14150 950
+F 0 "C21" H 14059 904 50  0000 R CNN
+F 1 "1u" H 14059 995 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 14150 950 50  0001 C CNN
+F 3 "~" H 14150 950 50  0001 C CNN
+	1    14150 950 
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	14150 850  14150 800 
+Connection ~ 14150 850 
+Wire Wire Line
+	14150 1050 14150 1100
+Connection ~ 14150 1050
+$Comp
+L power:GND #PWR022
+U 1 1 5FE5BCCD
+P 14150 1100
+F 0 "#PWR022" H 14150 850 50  0001 C CNN
+F 1 "GND" H 14155 927 50  0000 C CNN
+F 2 "" H 14150 1100 50  0001 C CNN
+F 3 "" H 14150 1100 50  0001 C CNN
+	1    14150 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR021
+U 1 1 5FE73C49
+P 14150 800
+F 0 "#PWR021" H 14150 650 50  0001 C CNN
+F 1 "+3.3V" H 14165 973 50  0000 C CNN
+F 2 "" H 14150 800 50  0001 C CNN
+F 3 "" H 14150 800 50  0001 C CNN
+	1    14150 800 
+	1    0    0    -1  
+$EndComp
+Text GLabel 14550 1300 0    50   Input ~ 0
+SD_CS
+Wire Wire Line
+	14150 1050 14550 1050
+Wire Wire Line
+	14150 850  14550 850 
+Text GLabel 14550 1400 0    50   Input ~ 0
+SCLK
+Text GLabel 14550 1500 0    50   Input ~ 0
+MOSI
+Text GLabel 14550 1600 0    50   Input ~ 0
+MISO
+Wire Notes Line
+	13500 500  13500 2150
+Wire Notes Line
+	13500 2150 16000 2150
+Text Notes 13550 2100 0    50   ~ 0
+4GB Flash module using SPI & SD Card protocol
 $EndSCHEMATC
