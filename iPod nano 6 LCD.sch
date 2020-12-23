@@ -217,17 +217,6 @@ Wire Notes Line
 Text Notes 3300 2400 0    50   ~ 0
 Display connector
 $Comp
-L iPod~nano~6~LCD:ATSAM3SD8BA-AU U2
-U 1 1 5FD74BEF
-P 8000 3000
-F 0 "U2" H 8150 -650 50  0000 L CNN
-F 1 "ATSAM3SD8BA-AU" H 7600 -750 50  0000 L CNN
-F 2 "iPod nano 6 LCD:QFP-64_12x12_Pitch0.5mm" H 8000 3000 50  0001 C CNN
-F 3 "" H 8000 3000 50  0001 C CNN
-	1    8000 3000
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C_Small C7
 U 1 1 5FDF9FB0
 P 6500 2650
