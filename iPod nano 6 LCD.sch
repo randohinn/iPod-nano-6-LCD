@@ -287,53 +287,9 @@ Wire Wire Line
 	6500 3750 6750 3750
 Wire Wire Line
 	6750 3950 6600 3950
-$Comp
-L power:+1V8 #PWR011
-U 1 1 5FE001DC
-P 6500 2550
-F 0 "#PWR011" H 6500 2400 50  0001 C CNN
-F 1 "+1V8" H 6350 2600 50  0000 C CNN
-F 2 "" H 6500 2550 50  0001 C CNN
-F 3 "" H 6500 2550 50  0001 C CNN
-	1    6500 2550
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+1V8 #PWR012
-U 1 1 5FE0092F
-P 6500 2900
-F 0 "#PWR012" H 6500 2750 50  0001 C CNN
-F 1 "+1V8" H 6350 2950 50  0000 C CNN
-F 2 "" H 6500 2900 50  0001 C CNN
-F 3 "" H 6500 2900 50  0001 C CNN
-	1    6500 2900
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6500 2950 6500 2900
 Connection ~ 6500 2950
-$Comp
-L power:+1V8 #PWR013
-U 1 1 5FE01697
-P 6500 3300
-F 0 "#PWR013" H 6500 3150 50  0001 C CNN
-F 1 "+1V8" H 6350 3350 50  0000 C CNN
-F 2 "" H 6500 3300 50  0001 C CNN
-F 3 "" H 6500 3300 50  0001 C CNN
-	1    6500 3300
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+1V8 #PWR014
-U 1 1 5FE01A30
-P 6500 3700
-F 0 "#PWR014" H 6500 3550 50  0001 C CNN
-F 1 "+1V8" H 6350 3750 50  0000 C CNN
-F 2 "" H 6500 3700 50  0001 C CNN
-F 3 "" H 6500 3700 50  0001 C CNN
-	1    6500 3700
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6500 3300 6500 3350
 Connection ~ 6500 3350
@@ -396,7 +352,6 @@ $EndComp
 Connection ~ 6600 3950
 Wire Wire Line
 	6600 3950 6500 3950
-Connection ~ 6500 2550
 $Comp
 L Device:C_Small C6
 U 1 1 5FE04BE0
@@ -487,18 +442,6 @@ Connection ~ 5900 2300
 Connection ~ 5900 2200
 Wire Wire Line
 	5900 2200 6750 2200
-$Comp
-L power:+1V8 #PWR05
-U 1 1 5FE12CAB
-P 5650 2200
-F 0 "#PWR05" H 5650 2050 50  0001 C CNN
-F 1 "+1V8" H 5650 2350 50  0000 C CNN
-F 2 "" H 5650 2200 50  0001 C CNN
-F 3 "" H 5650 2200 50  0001 C CNN
-	1    5650 2200
-	1    0    0    -1  
-$EndComp
-Connection ~ 5650 2200
 Text GLabel 6750 1850 0    50   Input ~ 0
 VDDPLL
 Text GLabel 6750 1950 0    50   Input ~ 0
@@ -583,39 +526,6 @@ Wire Wire Line
 	5100 850  5100 800 
 Wire Wire Line
 	5850 850  5850 800 
-$Comp
-L power:+1V8 #PWR07
-U 1 1 5FE1CDDB
-P 5850 800
-F 0 "#PWR07" H 5850 650 50  0001 C CNN
-F 1 "+1V8" H 5850 950 50  0000 C CNN
-F 2 "" H 5850 800 50  0001 C CNN
-F 3 "" H 5850 800 50  0001 C CNN
-	1    5850 800 
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+1V8 #PWR01
-U 1 1 5FE1D0E3
-P 5100 800
-F 0 "#PWR01" H 5100 650 50  0001 C CNN
-F 1 "+1V8" H 5100 950 50  0000 C CNN
-F 2 "" H 5100 800 50  0001 C CNN
-F 3 "" H 5100 800 50  0001 C CNN
-	1    5100 800 
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+1V8 #PWR03
-U 1 1 5FE1D334
-P 5450 800
-F 0 "#PWR03" H 5450 650 50  0001 C CNN
-F 1 "+1V8" H 5450 950 50  0000 C CNN
-F 2 "" H 5450 800 50  0001 C CNN
-F 3 "" H 5450 800 50  0001 C CNN
-	1    5450 800 
-	1    0    0    -1  
-$EndComp
 Text GLabel 5450 850  2    50   Input ~ 0
 VDDPLL
 Text GLabel 5100 850  2    50   Input ~ 0
@@ -1032,7 +942,7 @@ Wire Notes Line
 Wire Notes Line
 	3250 550  3250 6200
 Text Notes 550  6150 0    50   ~ 0
-BL Generator & SPI FLASH supply voltage
+Main power
 $Comp
 L Regulator_Linear:AZ1117-1.8 U3
 U 1 1 5FE021C3
@@ -1045,7 +955,7 @@ F 3 "https://www.diodes.com/assets/Datasheets/AZ1117.pdf" H 1750 3000 50  0001 C
 	1    0    0    -1  
 $EndComp
 Text Notes 550  3850 0    50   ~ 0
-Main CPU power reg
+Create 1.8V for the lcd
 $Comp
 L Device:C_Small C?
 U 1 1 5FE031D1
@@ -1642,4 +1552,144 @@ Wire Notes Line
 	13500 2150 16000 2150
 Text Notes 13550 2100 0    50   ~ 0
 4GB Flash module using SPI & SD Card protocol
+$Comp
+L Device:LED_Small D?
+U 1 1 5FEB20A3
+P 4800 3200
+F 0 "D?" V 4846 3130 50  0000 R CNN
+F 1 "+3.3v" V 4755 3130 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" V 4800 3200 50  0001 C CNN
+F 3 "~" V 4800 3200 50  0001 C CNN
+	1    4800 3200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FEB20A9
+P 4800 3350
+F 0 "#PWR?" H 4800 3100 50  0001 C CNN
+F 1 "GND" H 4805 3177 50  0000 C CNN
+F 2 "" H 4800 3350 50  0001 C CNN
+F 3 "" H 4800 3350 50  0001 C CNN
+	1    4800 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5FEB20AF
+P 4800 2950
+F 0 "R?" H 4859 2996 50  0000 L CNN
+F 1 "8" H 4859 2905 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 4800 2950 50  0001 C CNN
+F 3 "~" H 4800 2950 50  0001 C CNN
+	1    4800 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 3050 4800 3100
+Wire Wire Line
+	4800 3300 4800 3350
+Wire Wire Line
+	4800 2850 4800 2800
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5FEB20B8
+P 4800 2800
+F 0 "#PWR?" H 4800 2650 50  0001 C CNN
+F 1 "+3.3V" H 4815 2973 50  0000 C CNN
+F 2 "" H 4800 2800 50  0001 C CNN
+F 3 "" H 4800 2800 50  0001 C CNN
+	1    4800 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5FEBDF98
+P 5650 2200
+F 0 "#PWR?" H 5650 2050 50  0001 C CNN
+F 1 "+3.3V" H 5665 2373 50  0000 C CNN
+F 2 "" H 5650 2200 50  0001 C CNN
+F 3 "" H 5650 2200 50  0001 C CNN
+	1    5650 2200
+	1    0    0    -1  
+$EndComp
+Connection ~ 5650 2200
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5FEBE273
+P 6500 2550
+F 0 "#PWR?" H 6500 2400 50  0001 C CNN
+F 1 "+3.3V" H 6350 2650 50  0000 C CNN
+F 2 "" H 6500 2550 50  0001 C CNN
+F 3 "" H 6500 2550 50  0001 C CNN
+	1    6500 2550
+	1    0    0    -1  
+$EndComp
+Connection ~ 6500 2550
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5FEBE4C5
+P 6500 2900
+F 0 "#PWR?" H 6500 2750 50  0001 C CNN
+F 1 "+3.3V" H 6350 3000 50  0000 C CNN
+F 2 "" H 6500 2900 50  0001 C CNN
+F 3 "" H 6500 2900 50  0001 C CNN
+	1    6500 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5FEBE61F
+P 6500 3300
+F 0 "#PWR?" H 6500 3150 50  0001 C CNN
+F 1 "+3.3V" H 6350 3350 50  0000 C CNN
+F 2 "" H 6500 3300 50  0001 C CNN
+F 3 "" H 6500 3300 50  0001 C CNN
+	1    6500 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5FEBE7BC
+P 6500 3700
+F 0 "#PWR?" H 6500 3550 50  0001 C CNN
+F 1 "+3.3V" H 6350 3800 50  0000 C CNN
+F 2 "" H 6500 3700 50  0001 C CNN
+F 3 "" H 6500 3700 50  0001 C CNN
+	1    6500 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5FEBF4D3
+P 5100 800
+F 0 "#PWR?" H 5100 650 50  0001 C CNN
+F 1 "+3.3V" H 5115 973 50  0000 C CNN
+F 2 "" H 5100 800 50  0001 C CNN
+F 3 "" H 5100 800 50  0001 C CNN
+	1    5100 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5FEBF847
+P 5450 800
+F 0 "#PWR?" H 5450 650 50  0001 C CNN
+F 1 "+3.3V" H 5465 973 50  0000 C CNN
+F 2 "" H 5450 800 50  0001 C CNN
+F 3 "" H 5450 800 50  0001 C CNN
+	1    5450 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5FEBFA5B
+P 5850 800
+F 0 "#PWR?" H 5850 650 50  0001 C CNN
+F 1 "+3.3V" H 5865 973 50  0000 C CNN
+F 2 "" H 5850 800 50  0001 C CNN
+F 3 "" H 5850 800 50  0001 C CNN
+	1    5850 800 
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
