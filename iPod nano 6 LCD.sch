@@ -745,14 +745,6 @@ Text GLabel 6250 8800 2    50   Input ~ 0
 TDO
 Text GLabel 6250 8700 2    50   Input ~ 0
 TDI
-Text GLabel 8400 5700 2    50   Input ~ 0
-TMS
-Text GLabel 8400 5500 2    50   Input ~ 0
-TDI
-Text GLabel 8400 5600 2    50   Input ~ 0
-TDO
-Text GLabel 8400 5800 2    50   Input ~ 0
-TCK
 $Comp
 L power:GND #PWR?
 U 1 1 5FEFBAAD
@@ -766,144 +758,6 @@ F 3 "" H 6050 9000 50  0001 C CNN
 	1    6050 9000
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:Crystal_Small Y1
-U 1 1 5FF05C66
-P 8750 2450
-F 0 "Y1" V 8704 2538 50  0000 L CNN
-F 1 "32.768k" V 8900 2300 50  0000 L CNN
-F 2 "Crystal:Crystal_SMD_Abracon_ABS25-4Pin_8.0x3.8mm" H 8750 2450 50  0001 C CNN
-F 3 "~" H 8750 2450 50  0001 C CNN
-	1    8750 2450
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	8500 2400 8500 2350
-Wire Wire Line
-	8500 2350 8750 2350
-Wire Wire Line
-	8400 2400 8500 2400
-Wire Wire Line
-	8400 2500 8500 2500
-Wire Wire Line
-	8500 2500 8500 2550
-Wire Wire Line
-	8500 2550 8750 2550
-Connection ~ 8750 2350
-Connection ~ 8750 2550
-$Comp
-L Device:C_Small C13
-U 1 1 5FF208F8
-P 9050 2350
-F 0 "C13" H 8959 2304 50  0000 R CNN
-F 1 "12.5p" H 8959 2395 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 9050 2350 50  0001 C CNN
-F 3 "~" H 9050 2350 50  0001 C CNN
-	1    9050 2350
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:C_Small C18
-U 1 1 5FF20D1C
-P 9050 2550
-F 0 "C18" H 8959 2504 50  0000 R CNN
-F 1 "12.5p" H 8959 2595 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 9050 2550 50  0001 C CNN
-F 3 "~" H 9050 2550 50  0001 C CNN
-	1    9050 2550
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	8750 2350 8950 2350
-Wire Wire Line
-	8950 2550 8750 2550
-Wire Wire Line
-	9150 2550 9200 2550
-Wire Wire Line
-	9200 2550 9200 2350
-Wire Wire Line
-	9200 2350 9150 2350
-$Comp
-L power:GND #PWR0116
-U 1 1 5FF353AF
-P 9200 2550
-F 0 "#PWR0116" H 9200 2300 50  0001 C CNN
-F 1 "GND" H 9300 2450 50  0000 C CNN
-F 2 "" H 9200 2550 50  0001 C CNN
-F 3 "" H 9200 2550 50  0001 C CNN
-	1    9200 2550
-	1    0    0    -1  
-$EndComp
-Connection ~ 9200 2550
-$Comp
-L Device:Crystal_Small Y2
-U 1 1 5FF4687B
-P 8750 5950
-F 0 "Y2" V 8704 6038 50  0000 L CNN
-F 1 "20MHz" V 8900 5800 50  0000 L CNN
-F 2 "Crystal:Crystal_SMD_Abracon_ABM8G-4Pin_3.2x2.5mm" H 8750 5950 50  0001 C CNN
-F 3 "~" H 8750 5950 50  0001 C CNN
-	1    8750 5950
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	8500 5900 8500 5850
-Wire Wire Line
-	8500 5850 8750 5850
-Wire Wire Line
-	8400 5900 8500 5900
-Wire Wire Line
-	8400 6000 8500 6000
-Wire Wire Line
-	8500 6000 8500 6050
-Wire Wire Line
-	8500 6050 8750 6050
-Connection ~ 8750 5850
-Connection ~ 8750 6050
-$Comp
-L Device:C_Small C19
-U 1 1 5FF46889
-P 9050 5850
-F 0 "C19" H 8959 5804 50  0000 R CNN
-F 1 "10p" H 8959 5895 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 9050 5850 50  0001 C CNN
-F 3 "~" H 9050 5850 50  0001 C CNN
-	1    9050 5850
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:C_Small C20
-U 1 1 5FF4688F
-P 9050 6050
-F 0 "C20" H 8959 6004 50  0000 R CNN
-F 1 "10p" H 8959 6095 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 9050 6050 50  0001 C CNN
-F 3 "~" H 9050 6050 50  0001 C CNN
-	1    9050 6050
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	8750 5850 8950 5850
-Wire Wire Line
-	8950 6050 8750 6050
-Wire Wire Line
-	9150 6050 9200 6050
-Wire Wire Line
-	9200 6050 9200 5850
-Wire Wire Line
-	9200 5850 9150 5850
-$Comp
-L power:GND #PWR020
-U 1 1 5FF4689A
-P 9200 6050
-F 0 "#PWR020" H 9200 5800 50  0001 C CNN
-F 1 "GND" H 9300 5950 50  0000 C CNN
-F 2 "" H 9200 6050 50  0001 C CNN
-F 3 "" H 9200 6050 50  0001 C CNN
-	1    9200 6050
-	1    0    0    -1  
-$EndComp
-Connection ~ 9200 6050
 $Comp
 L iPod~nano~6~LCD:XTSD04GLGEAG U5
 U 1 1 5FE33365
@@ -2419,10 +2273,10 @@ F 3 "~" H 12450 5950 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C_Small C?
+L Device:C_Small C37
 U 1 1 60640315
 P 12450 6100
-F 0 "C?" H 12359 6054 50  0000 R CNN
+F 0 "C37" H 12359 6054 50  0000 R CNN
 F 1 "1u" H 12359 6145 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 12450 6100 50  0001 C CNN
 F 3 "~" H 12450 6100 50  0001 C CNN
@@ -2449,10 +2303,10 @@ Connection ~ 12200 6100
 Wire Wire Line
 	12200 6100 12200 5950
 $Comp
-L Device:C_Small C?
+L Device:C_Small C36
 U 1 1 606A68A3
 P 11300 4250
-F 0 "C?" H 11209 4204 50  0000 R CNN
+F 0 "C36" H 11209 4204 50  0000 R CNN
 F 1 "1u" H 11209 4295 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 11300 4250 50  0001 C CNN
 F 3 "~" H 11300 4250 50  0001 C CNN
@@ -2479,10 +2333,10 @@ Connection ~ 11050 4250
 Wire Wire Line
 	11050 4250 11050 4100
 $Comp
-L Device:C_Small C?
+L Device:C_Small C34
 U 1 1 6071123E
 P 10050 6750
-F 0 "C?" H 9959 6704 50  0000 R CNN
+F 0 "C34" H 9959 6704 50  0000 R CNN
 F 1 "1u" H 9959 6795 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 10050 6750 50  0001 C CNN
 F 3 "~" H 10050 6750 50  0001 C CNN
@@ -2513,10 +2367,10 @@ Wire Wire Line
 Wire Wire Line
 	11450 900  11450 1050
 $Comp
-L Device:C_Small C?
+L Device:C_Small C35
 U 1 1 607837B2
 P 11250 1050
-F 0 "C?" H 11159 1004 50  0000 R CNN
+F 0 "C35" H 11159 1004 50  0000 R CNN
 F 1 "1u" H 11159 1095 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 11250 1050 50  0001 C CNN
 F 3 "~" H 11250 1050 50  0001 C CNN
@@ -2538,4 +2392,88 @@ Connection ~ 11100 1050
 Connection ~ 11000 1050
 Wire Wire Line
 	11000 1050 11000 900 
+$Comp
+L power:GND #PWR042
+U 1 1 607F02CC
+P 1375 8625
+F 0 "#PWR042" H 1375 8375 50  0001 C CNN
+F 1 "GND" H 1380 8452 50  0000 C CNN
+F 2 "" H 1375 8625 50  0001 C CNN
+F 3 "" H 1375 8625 50  0001 C CNN
+	1    1375 8625
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6081C3F1
+P 1825 7975
+AR Path="/5FEB2752/6081C3F1" Ref="#PWR?"  Part="1" 
+AR Path="/6081C3F1" Ref="#PWR043"  Part="1" 
+F 0 "#PWR043" H 1825 7725 50  0001 C CNN
+F 1 "GND" H 1830 7802 50  0000 C CNN
+F 2 "" H 1825 7975 50  0001 C CNN
+F 3 "" H 1825 7975 50  0001 C CNN
+	1    1825 7975
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C38
+U 1 1 607F1BE9
+P 1575 7950
+F 0 "C38" H 1484 7904 50  0000 R CNN
+F 1 "1u" H 1484 7995 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1575 7950 50  0001 C CNN
+F 3 "~" H 1575 7950 50  0001 C CNN
+	1    1575 7950
+	0    1    1    0   
+$EndComp
+$Comp
+L Memory_EEPROM:AT25xxx U7
+U 1 1 607EEFB8
+P 1375 8325
+F 0 "U7" H 1075 8850 50  0000 C CNN
+F 1 "AT25xxx" H 1175 8750 50  0000 C CNN
+F 2 "Package_DFN_QFN:DFN-8-1EP_3x2mm_P0.5mm_EP1.75x1.45mm" H 1375 8325 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8707-SEEPROM-AT25010B-020B-040B-Datasheet.pdf" H 1375 8325 50  0001 C CNN
+	1    1375 8325
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1675 7950 1825 7950
+Wire Wire Line
+	1825 7950 1825 7975
+Wire Wire Line
+	1375 7950 1475 7950
+Wire Wire Line
+	1375 7950 1375 8025
+$Comp
+L power:+3.3V #PWR041
+U 1 1 60875906
+P 1375 7875
+F 0 "#PWR041" H 1375 7725 50  0001 C CNN
+F 1 "+3.3V" H 1390 8048 50  0000 C CNN
+F 2 "" H 1375 7875 50  0001 C CNN
+F 3 "" H 1375 7875 50  0001 C CNN
+	1    1375 7875
+	1    0    0    -1  
+$EndComp
+Connection ~ 1375 7950
+Wire Wire Line
+	1375 7875 1375 7950
+Text GLabel 14100 3800 0    50   Input ~ 0
+SCK
+Text GLabel 14100 3900 0    50   Input ~ 0
+CFG_CS
+Text GLabel 1775 8225 2    50   Input ~ 0
+SCK
+Text GLabel 975  8425 0    50   Input ~ 0
+CFG_CS
+Text GLabel 14100 3600 0    50   Input ~ 0
+MOSI
+Text GLabel 14100 3700 0    50   Input ~ 0
+MISO
+Text GLabel 1775 8325 2    50   Input ~ 0
+MOSI
+Text GLabel 1775 8425 2    50   Input ~ 0
+MISO
 $EndSCHEMATC
