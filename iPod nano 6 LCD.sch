@@ -1958,9 +1958,9 @@ Text Label 14650 4675 0    50   ~ 0
 ICE_DP
 Text Label 14375 4300 0    50   ~ 0
 ICE_DPBIAS
-Text Label 12625 3025 2    50   ~ 0
-ICE_DP
 Text Label 12625 3125 2    50   ~ 0
+ICE_DP
+Text Label 12625 3025 2    50   ~ 0
 ICE_DPBIAS
 Text Label 12625 3225 2    50   ~ 0
 ICE_DN
@@ -2054,9 +2054,9 @@ Text Label 15275 5375 2    50   ~ 0
 LCD_CP
 Text Label 15275 4675 2    50   ~ 0
 LCD_CN
-Text Label 12625 3425 2    50   ~ 0
-ICE_CN
 Text Label 12625 3525 2    50   ~ 0
+ICE_CN
+Text Label 12625 3425 2    50   ~ 0
 ICE_CNBIAS
 Text Label 12625 3625 2    50   ~ 0
 ICE_CP
@@ -3344,9 +3344,7 @@ Wire Wire Line
 	15150 2925 15100 2925
 Wire Wire Line
 	15150 3025 15100 3025
-Wire Wire Line
-	12625 3925 12575 3925
-Text Label 12575 3925 2    50   ~ 0
+Text Label 12625 3925 2    50   ~ 0
 LCD_RESET
 Wire Wire Line
 	15100 3225 15150 3225
