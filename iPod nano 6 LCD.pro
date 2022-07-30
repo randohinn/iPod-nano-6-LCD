@@ -1,4 +1,4 @@
-update=20.12.2020 13:35:50
+update=E 11 jaan  2021 15:35:02 EET
 version=1
 last_client=kicad
 [general]
@@ -18,8 +18,8 @@ PageLayoutDescrFile=
 LastNetListRead=
 CopperLayerCount=2
 BoardThickness=1.6
-AllowMicroVias=0
-AllowBlindVias=0
+AllowMicroVias=1
+AllowBlindVias=1
 RequireCourtyardDefinitions=0
 ProhibitOverlappingCourtyards=1
 MinTrackWidth=0.08889999999999999
@@ -66,8 +66,8 @@ OthersTextSizeH=0.6
 OthersTextSizeThickness=0.14
 OthersTextItalic=0
 OthersTextUpright=1
-SolderMaskClearance=0.051
-SolderMaskMinWidth=0.25
+SolderMaskClearance=0
+SolderMaskMinWidth=0
 SolderPasteClearance=0
 SolderPasteRatio=-0
 [pcbnew/Layer.F.Cu]
@@ -239,7 +239,7 @@ Enabled=0
 [pcbnew/Netclasses]
 [pcbnew/Netclasses/Default]
 Name=Default
-Clearance=0.0889
+Clearance=0.127
 TrackWidth=0.0889
 ViaDiameter=0.8
 ViaDrill=0.4
